@@ -1,0 +1,31 @@
+.container{
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+  
+  .div1 {
+    height: 100px;
+    width: 100%;
+    background-color: #141f14;
+  }
+  
+  .div2 {
+    height: 250px;
+    width: 150px;
+    background-color: #80bfab;
+  }
+  
+  .div3 {
+    height: 250px;
+    width: 250px;
+    background-color: #8c2727;
+  }
+  
+  .div4 {
+    height: 100px;
+    width: 100%;
+    background-color: #d98d30;
+  }
+}
