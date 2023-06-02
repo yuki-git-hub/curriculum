@@ -1,0 +1,30 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    background:#808080;
+    color:#FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1,.container h2,.container h3,.container p{
+    margin-top:32px;
+    margin-bottom:16px;
+}
+
+.container h1{
+    border-bottom: #fff solid 4px;
+}
+
+.container-inner{ 
+    width:calc(100% - 48px);
+    margin:auto;
+    text-align:center;    
+}
+
+@media screen and (min-width: 768px) {
+    .container-inner{ 
+        width:100%;
+    }
+}
