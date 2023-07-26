@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
 <?php
-header('Content-Type: text/html; charset=UTF-8');
 // クラスの名簿の配列
 $list = array(
     '山田' => array(
@@ -54,7 +45,7 @@ function getName($list) {
 //配列の中の名前を出す。
     foreach ($list as $key => $member) {
         if ($i < count($list)) {
-            echo $key . '<br>';
+            echo $key[0] . '<br>';
         }
         $i++;
     }
@@ -63,7 +54,7 @@ function getName($list) {
 getName($list);
 echo '<br>';
 // 大阪出身の方を表示
-getPeople($list);
+getPeople();
 
 // 大阪出身の方を抽出
 function getPeople($list) {
@@ -74,6 +65,4 @@ function getPeople($list) {
     }
 }
 
-?>    
-</body>
-</html>
+?>
