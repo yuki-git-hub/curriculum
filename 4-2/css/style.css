@@ -45,7 +45,14 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
+
+  .section1 table{
+    background-color: #e0ffff;
+  }
+
+  .section1 th{
+    background-color: #87ceeb;
+  }
   .footer {
     width: 1000px;
     height: 120px;

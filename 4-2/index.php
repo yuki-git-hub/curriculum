@@ -37,27 +37,32 @@ $post_data = $getData->getPostData();
   </header>
   
   <section class="section1">
-    <table width="100%" bgcolor="e0ffff">
+    <table>
         <tr>
-            <th bgcolor="#87ceeb">記事ID</th>
-            <th bgcolor="#87ceeb">タイトル</th>
-            <th bgcolor="#87ceeb">カテゴリ</th>
-            <th bgcolor="#87ceeb">本文</th>
-            <th bgcolor="#87ceeb">投稿日</th>
+            <th>記事ID</th>
+            <th>タイトル</th>
+            <th>カテゴリ</th>
+            <th>本文</th>
+            <th>投稿日</th>
         </tr>
 
-        <?php
-        // 記事情報をループで表示
-        foreach ($post_data as $post) {
-            echo '<tr>';
-            echo '<td>' . $post['id'] . '</td>';
-            echo '<td>' . $post['title'] . '</td>';
-            echo '<td>' . $post['category'] . '</td>';
-            echo '<td>' . $post['comment'] . '</td>';
-            echo '<td>' . $post['created'] . '</td>';
-            echo '</tr>';
-        }
-        ?>
+        <?php foreach ($post_data as $post): ?>
+          <tr>
+            <td><?php echo $post["id"]; ?></td>
+            <td><?php echo $post["title"]; ?></td>
+            <td><?php
+                if($post["category_no"] == 1){
+                    echo "食事";
+                } else if($post["category_no"] == 2){
+                    echo "旅行";
+                } else{
+                    echo "その他";
+                }
+                ?></td>
+            <td><?php echo $post["comment"]; ?></td>
+            <td><?php echo $post["created"]; ?></td>
+        </tr>
+        <?php endforeach ?>
     </table>
   </section>
   
